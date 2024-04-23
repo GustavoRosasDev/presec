@@ -1,0 +1,132 @@
+{
+    "type": [
+        {
+            "bash": [
+                {
+                    "usr": [
+                        {
+                            "basic": {
+                                "View Network Interface Details": {
+                                    "command": "ifconfig",
+                                    "description": "Displays detailed information about network interfaces, including IP addresses and traffic statistics."
+                                },
+                                "List Open Ports and Connections": {
+                                    "command": "netstat -tuln",
+                                    "description": "Lists open ports and active network connections, specifying TCP and UDP protocols."
+                                },
+                                "List Files with Specific Permissions": {
+                                    "command": "ls -la | grep 'rwxr-xr-x'",
+                                    "description": "Lists files in the current directory with 'rwxr-xr-x' permissions."
+                                }
+                            },
+                            "advanced": {
+                                "Display Details of Network Connections": {
+                                    "command": "ss -tulwn",
+                                    "description": "Displays detailed information about all active network connections."
+                                },
+                                "List Executable Files in the System Directory": {
+                                    "command": "find /bin /sbin /usr/bin /usr/sbin -type f -executable -exec ls -la {} \\;",
+                                    "description": "Lists executable files in the system directory."
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "root": [
+                        {
+                            "basic": {
+                                "List Network Connections": {
+                                    "command": "sudo chmod -o x open_me.txt",
+                                    "description": "Lists active network connections on the system"
+                                },
+                                "List System Log Files": {
+                                    "command": "sudo ls /var/log",
+                                    "description": "Lists system log files"
+                                }
+                            },
+                            "advanced": {
+                                "List Advanced Network Connections": {
+                                    "command": "sudo chmod -o x open_advanced.txt",
+                                    "description": "Lists advanced network connections on the system"
+                                },
+                                "List Advanced System Log Files": {
+                                    "command": "sudo ls /var/log/advanced",
+                                    "description": "Lists advanced system log files"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "shell": [
+                {
+                    "user": [
+                        {
+                            "basic": {
+                                "Network Configuration Information": {
+                                    "command": "ipconfig",
+                                    "description": "Displays detailed information about the system's network configuration, including IP address, subnet mask, default gateway, and other settings."
+                                },
+                                "System Information Checker": {
+                                    "command": "systeminfo",
+                                    "description": "Displays detailed information about the system, including the operating system name, system configuration, installed hotfixes, and more."
+                                },
+                                "System Hotfix Checker": {
+                                    "command": "Get-HotFix",
+                                    "description": "This command will show a list of hotfixes (patches) installed on the system."
+                                },
+                                "Monitor Running Processes in the System": {
+                                    "command": "Get-Process | Format-Table -AutoSize",
+                                    "description": "Retrieves information about the processes running on the system (returns details such as process name, process ID, CPU usage, memory usage, and more)."
+                                }
+                            },
+                            "advanced": {
+                                "Remove Malicious Key": {
+                                    "command": "Remove-Item -LiteralPath 'HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\MaliciousEncryptor' -Force -ErrorAction SilentlyContinue; if ($?) { Write-Host 'Malicious key successfully removed.' } else { Write-Host 'No malicious key found in the Registry.' }",
+                                    "description": "Removes a malicious key from the Windows Registry, if present."
+                                },
+                                "Recursive Subfolders and Files List Generator": {
+                                    "command": "Get-ChildItem -Recurse | Where-Object { $_.PSIsContainer -or $_.PSIsContainer -eq $false } | ForEach-Object { $_.FullName } | Out-File -FilePath folders_and_files.txt",
+                                    "description": "Recursively obtains all items (files and directories) from the current directory (and its subdirectories) and saves everything in a .txt file."
+                                },
+                                "Check Open Ports": {
+                                    "command": "Get-NetTCPConnection -State Established | Format-Table -AutoSize",
+                                    "description": "Displays information about established TCP connections, including details about local and remote ports, IP addresses, state, etc."
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "admin": [
+                        {
+                            "basic": {
+                                "Network Connections Analysis": {
+                                    "command": "Get-NetTCPConnection | Select-Object -Property LocalAddress, LocalPort, RemoteAddress, RemotePort, State; Get-NetUDPEndpoint | Select-Object -Property LocalAddress, LocalPort, RemoteAddress, RemotePort, State",
+                                    "description": "Performs an analysis of active TCP and UDP connections, displaying details such as local address, local port, remote address, remote port, and state."
+                                },
+                                "Check Security Policies": {
+                                    "command": "Get-ExecutionPolicy; Get-ProcessMitigation -System; Get-MpPreference | Select-Object -Property *Detection*",
+                                    "description": "Obtains the execution policy, information about system-level process mitigations, and Windows Defender detection preferences."
+                                }
+                            },
+                            "advanced": {
+                                "Port Scanning and Active Connections": {
+                                    "command": "Get-NetTCPConnection | Select-Object -Property LocalAddress, LocalPort, RemoteAddress, RemotePort, State; Test-NetConnection -ComputerName localhost -Port 80",
+                                    "description": "Lists active TCP connections and checks connectivity to a specific port (port 80 in the example)."
+                                },
+                                "Identify Suspicious Background Processes": {
+                                    "command": "Get-Process | Where-Object { $_.Path -eq $null -and $_.Handles -gt 500 -and $_.CPU -gt 50 }",
+                                    "description": "Lists suspicious processes that have no associated file path, have a significant number of object handles, and are using a considerable amount of CPU."
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,248 @@
+{
+    "Denial of Service": [
+        {
+            "code": "CVE-2023-24998",
+            "description": "Apache Commons FileUpload and Tomcat are vulnerable to a denial of service, caused by not limiting the number of request parts to be processed in the file upload function."
+        },
+        {
+            "code": "CVE-2022-3509",
+            "description": "Protobuf-java core and lite are vulnerable to a denial of service, caused by a flaw in the parsing procedure for textformat data. By sending non-repeated embedded messages with repeated or unknown fields, a remote authenticated attacker could exploit this vulnerability to cause long garbage collection pauses."
+        },
+        {
+            "code": "CVE-2022-3171",
+            "description": "Protobuf-java core and lite are vulnerable to a denial of service, caused by a flaw in the parsing procedure for binary and text format data."
+        },
+        {
+            "code": "CVE-2022-37734",
+            "description": "GraphQL Java is vulnerable to a denial of service, caused by an uncontrolled resource consumption flaw. By sending a specially-crafted request using Directive overloading, a remote attacker could exploit this vulnerability to cause a denial of service condition."
+        },
+        {
+            "code": "CVE-2022-24839",
+            "description": "Sparkle Motion Nokogiri is vulnerable to a denial of service, caused by a java.lang.OutOfMemoryError exception when parsing ill-formed HTML markup in the fork of org.cyberneko.html. By sending a specially-crafted request, a remote attacker could exploit this vulnerability to cause a denial of service condition."
+        },
+        {
+            "code": "CVE-2021-36090",
+            "description": "Apache Commons Compress is vulnerable to a denial of service, caused by an out of memory error when allocating large amounts of memory."
+        },
+        {
+            "code": "CVE-2021-35517",
+            "description": "Apache Commons Compress is vulnerable to a denial of service, caused by an out of memory error when allocating large amounts of memory."
+        },
+        {
+            "code": "CVE-2019-12406",
+            "description": "Apache CXF before 3.3.4 and 3.2.11 does not restrict the number of message attachments present in a given message. This leaves open the possibility of a denial of service type attack, where a malicious user crafts a message containing a very large number of message attachments."
+        },
+        {
+            "code": "CVE-2019-4720",
+            "description": "IBM WebSphere Application Server 7.0, 8.0, 8.5, and 9.0 is vulnerable to a denial of service, caused by sending a specially-crafted request. A remote attacker could exploit this vulnerability to cause the server to consume all available memory."
+        },
+        {
+            "code": "CVE-2019-9518",
+            "description": "Multiple vendors are vulnerable to a denial of service, caused by an Empty Frame Flooding attack. By sending a stream of frames with an empty payload and without the end-of-stream flag, a remote attacker could consume excessive CPU resources."
+        },
+        {
+            "code": "CVE-2019-9517",
+            "description": "Some HTTP/2 implementations are vulnerable to unconstrained internal data buffering, potentially leading to a denial of service."
+        },
+        {
+            "code": "CVE-2019-9515",
+            "description": "Some HTTP/2 implementations are vulnerable to a settings flood, potentially leading to a denial of service."
+        },
+        {
+            "code": "CVE-2019-9514",
+            "description": "Some HTTP/2 implementations are vulnerable to a reset flood, potentially leading to a denial of service."
+        },
+        {
+            "code": "CVE-2019-9513",
+            "description": "Some HTTP/2 implementations are vulnerable to resource loops, potentially leading to a denial of service."
+        },
+        {
+            "code": "CVE-2019-9512",
+            "description": "Some HTTP/2 implementations are vulnerable to ping floods, potentially leading to a denial of service."
+        },
+        {
+            "code": "CVE-2019-4304",
+            "description": "IBM WebSphere Application Server - Liberty could allow a remote attacker to bypass security restrictions caused by improper session validation."
+        },
+        {
+            "code": "CVE-2019-4046",
+            "description": "IBM WebSphere Application Server is vulnerable to a denial of service, caused by improper handling of request headers."
+        },
+        {
+            "code": "CVE-2017-12624",
+            "description": "Apache CXF is vulnerable to a denial of service. By using a specially crafted message attachment header, a remote attacker could exploit this vulnerability to cause the AX-WS and JAX-RS services stop responding."
+        }
+    ],
+    "Information Disclosure": [
+        {
+            "code": "CVE-2023-44483",
+            "description": "All versions of Apache Santuario - XML Security for Java prior to 2.2.6, 2.3.4, and 3.0.3, when using the JSR 105 API, are vulnerable to an issue where a private key may be disclosed in log files when generating an XML Signature and logging with debug level is enabled."
+        },
+        {
+            "code": "CVE-2022-45787",
+            "description": "Apache James MIME4J could allow a local authenticated attacker to obtain sensitive information, caused by improper laxist permissions on the temporary files."
+        },
+        {
+            "code": "CVE-2022-22393",
+            "description": "IBM WebSphere Application Server Liberty 17.0.0.3 through 22.0.0.5, with the adminCenter-1.0 feature configured, could allow an authenticated user to issue a request to obtain the status of HTTP/HTTPS ports which are accessible by the application server."
+        },
+        {
+            "code": "CVE-2022-22310",
+            "description": "IBM WebSphere Application Server Liberty could provide weaker than expected security. A remote attacker could exploit this weakness to obtain sensitive information and gain unauthorized access to JAX-WS applications."
+        },
+        {
+            "code": "CVE-2021-29842",
+            "description": "IBM WebSphere Application Server could allow a remote user to enumerate usernames due to a difference of responses from valid and invalid login attempts."
+        },
+        {
+            "code": "CVE-2019-17495",
+            "description": "A Cascading Style Sheets (CSS) injection vulnerability in Swagger UI before 3.23.11 allows attackers to use the Relative Path Overwrite (RPO) technique to perform CSS-based input field value exfiltration, such as exfiltration of a CSRF token value."
+        },
+        {
+            "code": "CVE-2019-4441",
+            "description": "IBM WebSphere Application Server Liberty could allow a remote attacker to obtain sensitive information, caused by incorrect transport being used when Liberty is configured to use Java Authentication SPI for Containers (JASPIC)."
+        },
+        {
+            "code": "CVE-2018-1755",
+            "description": "IBM WebSphere Application Server Liberty could allow a remote attacker to obtain sensitive information, caused by incorrect transport being used when Liberty is configured to use Java Authentication SPI for Containers (JASPIC)."
+        }
+    ],
+    "Weaker Security": [
+        {
+            "code": "CVE-2023-46158",
+            "description": "IBM WebSphere Application Server Liberty could provide weaker than expected security due to improper resource expiration handling."
+        }
+    ],
+    "Privilege Escalation": [
+        {
+            "code": "CVE-2023-0482",
+            "description": "RESTEasy could allow a local authenticated attacker to gain elevated privileges on the system, caused by the creation of insecure temp files in the File.createTempFile () used in the DataSourceProvider, FileProvider and Mime4JWorkaround classes."
+        },
+        {
+            "code": "CVE-2018-1901",
+            "description": "IBM WebSphere Application Server could allow a remote attacker to temporarily gain elevated privileges on the system, caused by incorrect cached value being used."
+        }
+    ],
+    "Server-Side Request Forgery": [
+        {
+            "code": "CVE-2022-46364",
+            "description": "Apache CXF is vulnerable to server-side request forgery, caused by a flaw in parsing the href attribute of XOP:Include in MTOM requests."
+        }
+    ],
+    "HTTP Header Injection": [
+        {
+            "code": "CVE-2022-34165",
+            "description": "IBM WebSphere Application Server and IBM WebSphere Application Server Liberty are vulnerable to HTTP header injection, caused by improper validation."
+        }
+    ],
+    "Identity Spoofing": [
+        {
+            "code": "CVE-2022-22476",
+            "description": "IBM WebSphere Application Server Liberty and Open Liberty are vulnerable to identity spoofing by an authenticated user using a specially crafted request."
+        },
+        {
+            "code": "CVE-2022-22475",
+            "description": "IBM WebSphere Application Server Liberty and Open Liberty 17.0.0.3 through 22.0.0.5 are vulnerable to identity spoofing by an authenticated user."
+        },
+        {
+            "code": "CVE-2020-4421",
+            "description": "IBM WebSphere Application Liberty 19.0.0.5 through 20.0.0.4 could allow an authenticated user using openidconnect to spoof another user's identity."
+        }
+    ],
+    "Clickjacking Vulnerability": [
+        {
+            "code": "CVE-2021-39038",
+            "description": "IBM WebSphere Application Server could allow a remote attacker to hijack the clicking action of the victim. By persuading a victim to visit a malicious website, a remote attacker could exploit this vulnerability to hijack the victim's click actions and possibly launch further attacks against the victim."
+        }
+    ],
+    "Remote Code Execution": [
+        {
+            "code": "CVE-2021-23450",
+            "description": "Dojo could allow a remote attacker to execute arbitrary code on the system, caused by a prototype pollution in the setObject function. By sending a specially-crafted request, an attacker could exploit this vulnerability to execute arbitrary code on the system."
+        },
+        {
+            "code": "CVE-2016-100031",
+            "description": "Apache Commons FileUpload, as used in several products, could allow a remote attacker to execute arbitrary code on the system, caused by deserialization of untrusted data in DiskFileItem class of the FileUpload library."
+        }
+    ],
+    "Click Hijacking": [
+        {
+            "code": "CVE-2021-46708",
+            "description": "The swagger-ui-dist package before 4.1.3 for Node.js could allow a remote attacker to hijack the clicking action of the victim."
+        }
+    ],
+    "Forgery Attack": [
+        {
+            "code": "CVE-2018-25031",
+            "description": "Swagger UI before 4.1.3 could allow a remote attacker to conduct spoofing attacks."
+        },
+        {
+            "code": "CVE-2017-1788",
+            "description": "IBM WebSphere Application Server 9 installations using Form Login could allow a remote attacker to conduct spoofing attacks."
+        }
+    ],
+    "LDAP Injection": [
+        {
+            "code": "CVE-2021-39031",
+            "description": "IBM WebSphere Application Server - Liberty 17.0.0.3 through 22.0.0.1 could allow a remote authenticated attacker to conduct an LDAP injection."
+        }
+    ],
+    "Security Bypass": [
+        {
+            "code": "CVE-2020-10693",
+            "description": "A flaw was found in Hibernate Validator version 6.1.2.Final. A bug in the message interpolation processor enables invalid EL expressions to be evaluated as if they were valid."
+        },
+        {
+            "code": "CVE-2014-7810",
+            "description": "The Expression Language (EL) implementation in Apache Tomcat 6.x before 6.0.44, 7.x before 7.0.58, and 8.x before 8.0.16 does not properly consider the possibility of an accessible interface implemented by an inaccessible class, which allows attackers to bypass a SecurityManager protection mechanism via a web application that leverages use of incorrect privileges during EL evaluation."
+        },
+        {
+            "code": "CVE-2019-4304",
+            "description": "IBM WebSphere Application Server - Liberty could allow a remote attacker to bypass security restrictions caused by improper session validation."
+        }
+    ],
+    "Man-in-the-Middle": [
+        {
+            "code": "CVE-2014-3603",
+            "description": "The (1) HttpResource and (2) FileBackedHttpResource implementations in Shibboleth Identity Provider (IdP) before 2.4.1 and OpenSAML Java 2.6.2 do not verify that the server hostname matches a domain name in the subject's Common Name (CN) or subjectAltName field of the X.509 certificate, which allows man-in-the-middle attackers to spoof SSL servers via an arbitrary valid certificate."
+        },
+        {
+            "code": "CVE-2018-8039",
+            "description": "It is possible to configure Apache CXF to use the com.sun.net.ssl implementation via 'System.setProperty (\"java.protocol.handler.pkgs\", \"com.sun.net.ssl.internal.www.protocol\");'. When this system property is set, CXF uses some reflection to try to make the HostnameVerifier work with the old com.sun.net.ssl.HostnameVerifier interface. However, the default HostnameVerifier implementation in CXF does not implement the method in this interface, and an exception is thrown. However, in Apache CXF prior to 3.2.5 and 3.1.16 the exception is caught in the reflection code and not properly propagated. What this means is that if you are using the com.sun.net.ssl stack with CXF, an error with TLS hostname verification will not be thrown, leaving a CXF client subject to man-in-the-middle attacks."
+        }
+    ],
+    "Cross-Site Scripting (XSS)": [
+        {
+            "code": "CVE-2020-4303",
+            "description": "IBM WebSphere Application Server - Liberty 17.0.0.3 through 20.0.0.3 is vulnerable to cross-site scripting. This vulnerability allows users to embed arbitrary JavaScript code in the Web UI thus altering the intended functionality potentially leading to credentials disclosure within a trusted session."
+        },
+        {
+            "code": "CVE-2020-4304",
+            "description": "IBM WebSphere Application Server - Liberty 17.0.0.3 through 20.0.0.3 is vulnerable to cross-site scripting. This vulnerability allows users to embed arbitrary JavaScript code in the Web UI thus altering the intended functionality potentially leading to credentials disclosure within a trusted session."
+        },
+        {
+            "code": "CVE-2019-17573",
+            "description": "By default, Apache CXF creates a /services page containing a listing of the available endpoint names and addresses. This webpage is vulnerable to a reflected Cross-Site Scripting (XSS) attack, which allows a malicious actor to inject javascript into the web page."
+        }
+    ],
+    "Spoofing": [
+        {
+            "code": "CVE-2014-3603",
+            "description": "The (1) HttpResource and (2) FileBackedHttpResource implementations in Shibboleth Identity Provider (IdP) before 2.4.1 and OpenSAML Java 2.6.2 do not verify that the server hostname matches a domain name in the subject's Common Name (CN) or subjectAltName field of the X.509 certificate, which allows man-in-the-middle attackers to spoof SSL servers via an arbitrary valid certificate."
+        },
+        {
+            "code": "CVE-2018-1902",
+            "description": "IBM WebSphere Application Server 7.0, 8.0, 8.5, and 9.0 could allow a remote attacker to spoof connection information which could be used to launch further attacks against the system."
+        },
+        {
+            "code": "CVE-2017-1788",
+            "description": "IBM WebSphere Application Server 9 installations using Form Login could allow a remote attacker to conduct spoofing attacks."
+        }
+    ],
+    "LISTA DO GUILHERME": [
+        {
+            "code": "VULNERABILIDADE DO GUILHERME",
+            "description": "--------SBDSABDHASVHDVAJVDAJHVDSVDJVHASJDVASHDSHAD\n"
+        }
+    ]
+}
